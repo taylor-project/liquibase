@@ -52,6 +52,7 @@
         <maven.build.timestamp.format>E MMM dd hh:mm:ss zzz yyyy</maven.build.timestamp.format>
         <build.timestamp>${maven.build.timestamp}</build.timestamp>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<wagon.ssh.version>1.0-beta-2</wagon.ssh.version>
     </properties>
 
     <modules>
@@ -150,6 +151,13 @@
     </dependencyManagement>
 
     <build>
+		<extensions>
+        	<extension>
+            	<groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>${wagon.ssh.version}</version>
+            </extension>
+        </extensions>
         <pluginManagement>
             <plugins>
                 <plugin>
