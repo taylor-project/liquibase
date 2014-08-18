@@ -257,20 +257,18 @@
         </plugins>
     </reporting>
 
-    <distributionManagement>
-        <repository>
-            <uniqueVersion>false</uniqueVersion>
-            <id>sonatype-nexus-staging</id>
-            <name>Sonatype Production Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-
-        </repository>
+ 	<distributionManagement>
+    	<repository>
+            <id>taylor-maven2-repository</id>
+            <name>Taylor Maven2 Repository</name>
+        	<url>sftp://web.sourceforge.net/home/project-web/taylor/htdocs/maven2</url>
+        </repository>   
         <snapshotRepository>
-            <uniqueVersion>false</uniqueVersion>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sontatype Snapshot Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
+            <id>taylor-maven2-snapshot-repository</id>
+            <name>Taylor Maven2 Snapshot Repository</name>
+            <url>sftp://web.sourceforge.net/home/project-web/taylor/htdocs/maven2</url>
+        	<uniqueVersion>false</uniqueVersion>
+    	</snapshotRepository>
     </distributionManagement>
 
     <profiles>
